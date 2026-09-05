@@ -1,10 +1,10 @@
 # Project Brief
 
 ## Spatial Question
-How does tree canopy coverage relate to urban heat island intensity in Kilombero, Morogoro, Tanzania?
+How does tree canopy coverage relate to urban heat island intensity in Kilombero, Morogoro, Tanzania.
 
 ## Study Area
-Kilombero District, Morogoro Region, Tanzania. The district boundary used for this analysis is sourced from the FAO GAUL Level 2 administrative boundaries dataset (ADM2_NAME = "Kilombero").
+Kilombero District, Morogoro Region, Tanzania. The district boundary was obtained in QGIS using the HCMGIS plugin (HCMGIS → Download OpenData → Global Administrative Areas by Country from GADM), which downloads GADM administrative boundary data directly into QGIS. Tanzania was selected as the country, and the Kilombero district polygon was extracted from the Level 2 administrative layer for use as the study area boundary.
 
 ## Datasets
 
@@ -12,10 +12,9 @@ Kilombero District, Morogoro Region, Tanzania. The district boundary used for th
 |---|---|---|
 | Sentinel-2 Surface Reflectance (Harmonized) | Derive NDVI and tree canopy cover mask | https://scihub.copernicus.eu/ (accessed via Google Earth Engine: `COPERNICUS/S2_SR_HARMONIZED`) |
 | Landsat 8/9 Collection 2 Level 2 | Derive Land Surface Temperature (LST), the urban heat island proxy | https://earthexplorer.usgs.gov/ (accessed via Google Earth Engine: `LANDSAT/LC08/C02/T1_L2`, `LANDSAT/LC09/C02/T1_L2`) |
-| Humanitarian Data Exchange - Tanzania Admin Boundaries | Define and clip the Kilombero District study area | https://data.humdata.org/dataset/cod-ab-tza |
+| GADM Global Administrative Areas (Tanzania) | Define and clip the Kilombero District study area | https://gadm.org/download_country.html (downloaded in QGIS via the HCMGIS plugin's "Global Administrative Areas by Country from GADM" tool) |
 | Hansen Global Forest Change | Cross-check baseline tree cover and canopy loss | https://www.globalforestwatch.org/dashboards/country/TZA/14/2/ |
 | ESA WorldCover 2021 | Separate built-up/urban areas from vegetated areas for comparison | https://esa-worldcover.org/en/data-access |
-
 
 ## Method Summary
 1. Clip all imagery to the Kilombero district boundary.
